@@ -1,0 +1,2 @@
+Azure azure:mem2_ssd1_x4
+AWS mem1_ssd1_x4

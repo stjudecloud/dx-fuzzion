@@ -1,0 +1,69 @@
+{
+  "outputSpec": [
+    {
+      "name": "fusions",
+      "label": "Fusions File",
+      "class": "file"
+    }
+  ],
+  "inputSpec": [
+    {
+      "name": "BAM",
+      "label": "RNASeq Bam file",
+      "class": "file",
+      "patterns": [
+        "*.bam"
+      ],
+      "optional": false
+    }
+  ],
+  "details": {
+    "contactEmail": "clay.mcleod@stjude.org"
+  },
+  "version": "1.1.0",
+  "dxapi": "1.0.0",
+  "summary": "Fusion gene detection by comparison to known breakpoints",
+  "openSource": false,
+  "authorizedUsers": [
+    "user-clmcleod",
+    "user-snewman",
+    "user-appdpdnanexus_stjude.org",
+    "user-appdddnanexus_stjude.org",
+    "org-stjude_cloud_app_runners",
+    "org-stjude_cloud"
+  ],
+  "regionalOptions": {
+    "azure:westus": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "azure:mem2_ssd1_x4"
+        }
+      }
+    },
+    "aws:us-east-1": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem2_ssd1_x4"
+        }
+      }
+    }
+  },
+  "developers": [
+    "user-clmcleod",
+    "user-athrashe"
+  ],
+  "billTo": "org-stjude_cloud",
+  "runSpec": {
+    "execDepends": [
+      {
+        "name": "samtools"
+      }
+    ],
+    "file": "src/code.sh",
+    "release": "14.04",
+    "interpreter": "bash",
+    "distribution": "Ubuntu"
+  },
+  "name": "stjude_fuzzion",
+  "title": "Fuzzion (St. Jude)"
+}
