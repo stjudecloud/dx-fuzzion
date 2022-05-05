@@ -23,7 +23,7 @@
   "version": "1.1.0",
   "dxapi": "1.0.0",
   "summary": "Fusion gene detection by comparison to known breakpoints",
-  "openSource": false,
+  "openSource": true,
   "authorizedUsers": [
     "user-clmcleod",
     "user-snewman",
